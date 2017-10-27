@@ -71,3 +71,5 @@ D:\Coding\Udemy\Vidly\obj\Debug\Vidly.dll
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.pdb
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.InitialModel.resources
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.csproj.GenerateResource.Cache
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomer.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
