@@ -16,5 +16,6 @@ namespace Vidly.Models
         public bool IsSubscribedToNewsletter { get; set; }
         public MembershipType MembershipType { get; set; }
         public byte MembershipTypeId { get; set; } //entity framework recognizes this convention and treats this prop as a foreign key
+        public DateTime? Birthdate { get; set; }
     }
 }

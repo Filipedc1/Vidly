@@ -217,6 +217,26 @@
     <Compile Include="Migrations\201710270624068_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201710270624068_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710270634484_AddedNamePropertyToMembershipType.cs" />
+    <Compile Include="Migrations\201710270634484_AddedNamePropertyToMembershipType.Designer.cs">
+      <DependentUpon>201710270634484_AddedNamePropertyToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270637051_UpdateMembershipTypeRecords.cs" />
+    <Compile Include="Migrations\201710270637051_UpdateMembershipTypeRecords.Designer.cs">
+      <DependentUpon>201710270637051_UpdateMembershipTypeRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270645278_AddBirthdatePropertyToCustomer.cs" />
+    <Compile Include="Migrations\201710270645278_AddBirthdatePropertyToCustomer.Designer.cs">
+      <DependentUpon>201710270645278_AddBirthdatePropertyToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270654174_AddRequiredAttributeToNameProp.cs" />
+    <Compile Include="Migrations\201710270654174_AddRequiredAttributeToNameProp.Designer.cs">
+      <DependentUpon>201710270654174_AddRequiredAttributeToNameProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270656143_AddRequiredAttributeToNamePropertyInMembershipType.cs" />
+    <Compile Include="Migrations\201710270656143_AddRequiredAttributeToNamePropertyInMembershipType.Designer.cs">
+      <DependentUpon>201710270656143_AddRequiredAttributeToNamePropertyInMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -323,6 +343,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710270624068_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201710270624068_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270634484_AddedNamePropertyToMembershipType.resx">
+      <DependentUpon>201710270634484_AddedNamePropertyToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270637051_UpdateMembershipTypeRecords.resx">
+      <DependentUpon>201710270637051_UpdateMembershipTypeRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270645278_AddBirthdatePropertyToCustomer.resx">
+      <DependentUpon>201710270645278_AddBirthdatePropertyToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270654174_AddRequiredAttributeToNameProp.resx">
+      <DependentUpon>201710270654174_AddRequiredAttributeToNameProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270656143_AddRequiredAttributeToNamePropertyInMembershipType.resx">
+      <DependentUpon>201710270656143_AddRequiredAttributeToNamePropertyInMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

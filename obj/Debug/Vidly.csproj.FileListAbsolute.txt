@@ -75,3 +75,8 @@ D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomer.resou
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypes.resources
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerName.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddedNamePropertyToMembershipType.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.UpdateMembershipTypeRecords.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddBirthdatePropertyToCustomer.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddRequiredAttributeToNameProp.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddRequiredAttributeToNamePropertyInMembershipType.resources
