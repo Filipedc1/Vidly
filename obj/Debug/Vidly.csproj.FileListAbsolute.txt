@@ -80,3 +80,5 @@ D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.UpdateMembershipTypeRecords.res
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddBirthdatePropertyToCustomer.resources
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddRequiredAttributeToNameProp.resources
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddRequiredAttributeToNamePropertyInMembershipType.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddGenre.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddAdditionalPropertiesToMovie.resources
