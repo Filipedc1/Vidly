@@ -11,6 +11,7 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
+        //application db context which is needed to access the database
         private ApplicationDbContext _context;
 
         public CustomersController()

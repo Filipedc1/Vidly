@@ -82,3 +82,4 @@ D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddRequiredAttributeToNameProp.
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddRequiredAttributeToNamePropertyInMembershipType.resources
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddGenre.resources
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddAdditionalPropertiesToMovie.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.PopulateGenreTable.resources

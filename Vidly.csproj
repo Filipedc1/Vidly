@@ -245,6 +245,10 @@
     <Compile Include="Migrations\201710271611146_AddAdditionalPropertiesToMovie.Designer.cs">
       <DependentUpon>201710271611146_AddAdditionalPropertiesToMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710310219416_PopulateGenreTable.cs" />
+    <Compile Include="Migrations\201710310219416_PopulateGenreTable.Designer.cs">
+      <DependentUpon>201710310219416_PopulateGenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -373,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710271611146_AddAdditionalPropertiesToMovie.resx">
       <DependentUpon>201710271611146_AddAdditionalPropertiesToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710310219416_PopulateGenreTable.resx">
+      <DependentUpon>201710310219416_PopulateGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
