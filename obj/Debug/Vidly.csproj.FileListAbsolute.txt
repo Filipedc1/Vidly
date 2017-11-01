@@ -82,3 +82,4 @@ D:\Coding\Udemy\Vidly\obj\Debug\Vidly.csproj.GenerateResource.Cache
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cache
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.dll
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.pdb
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.csprojResolveAssemblyReference.cache
