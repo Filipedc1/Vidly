@@ -33,6 +33,7 @@ namespace Vidly.Controllers
             return View(customers);
         }
 
+        //used for our Form
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -42,6 +43,27 @@ namespace Vidly.Controllers
             };
 
             return View(viewModel);
+        }
+
+
+        //HttpPost attribute is used to make sure this action can only be called using HttpPost and not HttpGet
+        //If your actions modify data, they should never be accessible by HttpGet.
+
+        //Model Binding: Because the model behind our view 'New.cshtml' is of type 'NewCustomerViewModel',
+        //we can use this type here as a parameter and MVC framework will automatically map request data to this object
+        //So MVC framework binds this model to the request data
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            //add this customer to our database
+            //adding this customer to the _context only adds it into memory
+            _context.Customers.Add(customer);
+
+            //to save the changes
+            _context.SaveChanges();
+
+            //redirect user back to list of customers 
+            return RedirectToAction("Index", "Customers");
         }
 
         public ActionResult Details(int? id)
