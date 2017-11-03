@@ -52,13 +52,26 @@ namespace Vidly.Controllers
         //Model Binding: Because the model behind our view 'New.cshtml' is of type 'NewCustomerViewModel',
         //we can use this type here as a parameter and MVC framework will automatically map request data to this object
         //So MVC framework binds this model to the request data
-        [HttpPost]
-        public ActionResult Create(Customer customer)
-        {
-            //add this customer to our database
 
-            //adding this customer to the _context only adds it into memory
-            _context.Customers.Add(customer);
+        //add this customer to our database
+        [HttpPost]
+        public ActionResult Save(Customer customer)
+        {
+            //if 0, then its a new customer
+            if (customer.Id == 0)
+            {
+                //adding this customer to the _context only adds it into memory
+                _context.Customers.Add(customer);
+            }
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+
+                customerInDb.Name = customer.Name;
+                customerInDb.Birthdate = customer.Birthdate;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+            }
 
             //to save the changes
             _context.SaveChanges();
