@@ -37,12 +37,12 @@ namespace Vidly.Controllers
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
-            var viewModel = new NewCustomerViewModel()
+            var viewModel = new CustomerFormViewModel()
             {
                 MembershipTypes = membershipTypes
             };
 
-            return View(viewModel);
+            return View("CustomerForm", viewModel);
         }
 
 
@@ -56,6 +56,7 @@ namespace Vidly.Controllers
         public ActionResult Create(Customer customer)
         {
             //add this customer to our database
+
             //adding this customer to the _context only adds it into memory
             _context.Customers.Add(customer);
 
@@ -76,6 +77,25 @@ namespace Vidly.Controllers
             }
 
             return View(customer);
+        }
+
+        public ActionResult Edit (int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+            {
+                return HttpNotFound();
+            }
+
+            var viewModel = new CustomerFormViewModel()
+            {
+                Customer = customer,
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+
+            //MVC will look for a view called 'Edit' if we dont have this 'New' parameter
+            return View("CustomerForm", viewModel); 
         }
     }
 }

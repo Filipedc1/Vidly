@@ -9,7 +9,7 @@ using Vidly.Models;
 
 namespace Vidly.ViewModels
 {
-    public class NewCustomerViewModel
+    public class CustomerFormViewModel
     {
         //using IEnumberable instead of List<> because we dont need any of the functionality (methods) that List<> provides
         //we just need to be able to iterate through our list
