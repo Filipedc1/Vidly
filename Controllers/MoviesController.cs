@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 using Vidly.Models;
 using System.Data.Entity;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -46,6 +47,41 @@ namespace Vidly.Controllers
             }
 
             return View(movie);
+        }
+
+        //add new movie 
+        public ActionResult New()
+        {
+            var viewModel = new MovieFormViewModel()
+            {
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("MovieForm", viewModel);
+        }
+
+        //Save form information
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            //if true, then it's a new customer
+            if (movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.Now;
+
+                _context.Movies.Add(movie);
+            }
+
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+            return RedirectToAction("Index", "Movies");
         }
     }
 }
