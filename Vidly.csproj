@@ -253,6 +253,10 @@
     <Compile Include="Migrations\201711080300230_AddMin18YearsIfAMemberAttributeToBirthdateProperty.Designer.cs">
       <DependentUpon>201711080300230_AddMin18YearsIfAMemberAttributeToBirthdateProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711080333348_AddedTwoStaticFieldsToMembershipType.cs" />
+    <Compile Include="Migrations\201711080333348_AddedTwoStaticFieldsToMembershipType.Designer.cs">
+      <DependentUpon>201711080333348_AddedTwoStaticFieldsToMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -393,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711080300230_AddMin18YearsIfAMemberAttributeToBirthdateProperty.resx">
       <DependentUpon>201711080300230_AddMin18YearsIfAMemberAttributeToBirthdateProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080333348_AddedTwoStaticFieldsToMembershipType.resx">
+      <DependentUpon>201711080333348_AddedTwoStaticFieldsToMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
