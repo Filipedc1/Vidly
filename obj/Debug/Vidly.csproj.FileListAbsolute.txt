@@ -152,3 +152,4 @@ C:\Users\QA\Documents\test\Vidly\obj\Debug\Vidly.Migrations.AddAdditionalPropert
 C:\Users\QA\Documents\test\Vidly\obj\Debug\Vidly.Migrations.PopulateGenreTable.resources
 C:\Users\QA\Documents\test\Vidly\obj\Debug\Vidly.csproj.GenerateResource.Cache
 C:\Users\QA\Documents\test\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cache
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddMin18YearsIfAMemberAttributeToBirthdateProperty.resources

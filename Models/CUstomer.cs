@@ -23,6 +23,7 @@ namespace Vidly.Models
         public byte MembershipTypeId { get; set; } //entity framework recognizes this convention and treats this prop as a foreign key
 
         [Display(Name = "Date of Birth")] //allows the 'New' form on the UI to display a speicific name instead of the name of the actual variable
+        [Min18YearsIfAMember] //custom attribute created
         public DateTime? Birthdate { get; set; }
     }
 }
