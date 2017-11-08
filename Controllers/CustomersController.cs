@@ -56,6 +56,7 @@ namespace Vidly.Controllers
 
         //add this customer to our database
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
             if (!ModelState.IsValid)
