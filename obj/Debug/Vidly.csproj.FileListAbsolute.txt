@@ -154,3 +154,6 @@ C:\Users\QA\Documents\test\Vidly\obj\Debug\Vidly.csproj.GenerateResource.Cache
 C:\Users\QA\Documents\test\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cache
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddMin18YearsIfAMemberAttributeToBirthdateProperty.resources
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddedTwoStaticFieldsToMembershipType.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddDisplayAttributeToGenreId.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddrequiredAttributeToReleaseDateAndNumberInStockProperties.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddRangeAttributeToNumberInStockProperty.resources
