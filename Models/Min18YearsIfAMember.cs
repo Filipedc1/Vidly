@@ -27,7 +27,7 @@ namespace Vidly.Models
 
             return (age >= 18)
                 ? ValidationResult.Success
-                : new ValidationResult("Customer should be at least 18 years old to go on a membership");
+                : new ValidationResult("Customer should be at least 18 years old to go on a membership.");
         }
     }
 }
