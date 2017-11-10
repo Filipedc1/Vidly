@@ -26,26 +26,26 @@ namespace Vidly.Controllers.API
         }
 
         //GET /api/customers/1
-        public CustomerDto GetCustomer(int id)
+        public IHttpActionResult GetCustomer(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             if (customer == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
             }
 
-            return Mapper.Map<Customer, CustomerDto>(customer);
+            return Ok(Mapper.Map<Customer, CustomerDto>(customer));
         }
 
         //POST /api/customers
         //this customer parameter will be in the request body, and the ASP.NET Web API Framework will automatically initialize this
         [HttpPost]
-        public CustomerDto CreateCustomer(CustomerDto customerDto)
+        public IHttpActionResult CreateCustomer(CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
             {
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest();
             }
 
             var customer = Mapper.Map<CustomerDto, Customer>(customerDto);
@@ -55,7 +55,9 @@ namespace Vidly.Controllers.API
 
             customerDto.Id = customer.Id;
 
-            return Mapper.Map<Customer, CustomerDto>(customer);
+            //return the URI of the newly created resource to the client
+            //second parameter is the actual object that was created
+            return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
         }
 
         //PUT /api/customers/1
