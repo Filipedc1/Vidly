@@ -163,3 +163,5 @@ D:\Coding\Udemy\Vidly\bin\System.Web.Http.WebHost.dll
 D:\Coding\Udemy\Vidly\bin\System.Net.Http.Formatting.xml
 D:\Coding\Udemy\Vidly\bin\System.Web.Http.xml
 D:\Coding\Udemy\Vidly\bin\System.Web.Http.WebHost.xml
+D:\Coding\Udemy\Vidly\bin\AutoMapper.dll
+D:\Coding\Udemy\Vidly\bin\AutoMapper.xml
