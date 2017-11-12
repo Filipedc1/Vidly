@@ -27,7 +27,13 @@ namespace Vidly.Controllers
         // GET: Movies
         public ActionResult Index()
         {
-            return View();
+            //'User' property of controller gives us access to current user
+            if (User.IsInRole(RoleName.CanManageMovies))
+            {
+                return View("List");
+            }
+
+            return View("ReadOnlyList");
         }
 
         public ActionResult Details(int? id)
@@ -60,6 +66,7 @@ namespace Vidly.Controllers
         }
 
         //add new movie 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var viewModel = new MovieFormViewModel()
