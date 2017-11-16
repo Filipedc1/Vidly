@@ -167,3 +167,4 @@ D:\Coding\Udemy\Vidly\bin\AutoMapper.dll
 D:\Coding\Udemy\Vidly\bin\AutoMapper.xml
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.SeedUsers.resources
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddDrivingLicenseToApplicationUser.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddPhoneToApplicationUser.resources
