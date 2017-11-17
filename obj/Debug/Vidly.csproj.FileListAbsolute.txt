@@ -174,3 +174,4 @@ D:\Coding\Udemy\Vidly\bin\Glimpse.Core.dll
 D:\Coding\Udemy\Vidly\bin\Glimpse.EF6.dll
 D:\Coding\Udemy\Vidly\bin\Glimpse.Mvc5.dll
 D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddRentalClass.resources
+D:\Coding\Udemy\Vidly\obj\Debug\Vidly.Migrations.AddNumberAvailableToMovie.resources
