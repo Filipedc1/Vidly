@@ -230,6 +230,7 @@
     <Compile Include="DTOs\GenreDto.cs" />
     <Compile Include="DTOs\MembershipTypeDto.cs" />
     <Compile Include="DTOs\MovieDto.cs" />
+    <Compile Include="DTOs\NewRentalDto.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -318,6 +319,10 @@
     <Compile Include="Migrations\201711160344251_AddPhoneToApplicationUser.Designer.cs">
       <DependentUpon>201711160344251_AddPhoneToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711170416192_AddRentalClass.cs" />
+    <Compile Include="Migrations\201711170416192_AddRentalClass.Designer.cs">
+      <DependentUpon>201711170416192_AddRentalClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -327,6 +332,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -656,6 +662,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711160344251_AddPhoneToApplicationUser.resx">
       <DependentUpon>201711160344251_AddPhoneToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711170416192_AddRentalClass.resx">
+      <DependentUpon>201711170416192_AddRentalClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
