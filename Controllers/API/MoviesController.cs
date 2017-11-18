@@ -21,10 +21,21 @@ namespace Vidly.Controllers.API
             _context = new ApplicationDbContext();
         }
 
-        public IHttpActionResult GetMovies()
+        //optional parameter 'query'. typeahead plug-in will send a query parameter here
+        public IHttpActionResult GetMovies(string query = null)
         {
-            var movieDtos = _context.Movies
+            var moviesQuery = _context.Movies
                 .Include(m => m.Genre)
+                .Where(m => m.NumberAvailable > 0);
+
+            //if query parameter is not null, modify it. this is for filtering typeahead feature in the new rentals movies input text box
+            //so if you type "spi", only movies that start with 'spi' will appear
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                moviesQuery = moviesQuery.Where(m => m.Name.Contains(query));
+            }
+
+            var movieDtos = moviesQuery
                 .ToList()
                 .Select(Mapper.Map<Movie, MovieDto>);
 

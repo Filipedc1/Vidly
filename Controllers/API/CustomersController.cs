@@ -22,10 +22,19 @@ namespace Vidly.Controllers.API
         }
 
         //GET /api/customers
-        public IHttpActionResult GetCustomers()
+        //optional parameter 'query'. typeahead plug-in will send a query parameter here
+        public IHttpActionResult GetCustomers(string query = null)
         {
-            var customerDtos = _context.Customers
-                .Include(c => c.MembershipType)
+            var customersQuery = _context.Customers
+                .Include(c => c.MembershipType);
+
+            //if query is not null, modify it. this is for filtering typeahead feature in the new rentals customer input text box
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                customersQuery = customersQuery.Where(c => c.Name.Contains(query));
+            }
+
+             var customerDtos = customersQuery   
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
 
