@@ -28,12 +28,7 @@ namespace Vidly.Controllers.API
                 return BadRequest("Either newRental object is null OR no Movie Ids have been given.");
             }
 
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == newRental.CustomerId);
-
-            if (customer == null)
-            {
-                return BadRequest("Customer Id is not valid.");
-            }
+            var customer = _context.Customers.Single(c => c.Id == newRental.CustomerId);
 
             var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id)).ToList();
 
@@ -46,7 +41,7 @@ namespace Vidly.Controllers.API
             {
                 if (movie.NumberAvailable == 0)
                 {
-                    return BadRequest($"Movie is not available. Movie Id: {movie.Id}");
+                    return BadRequest($"Movie is not available.\nMovie Id: {movie.Id}\nMovie Name: {movie.Name}");
                 }
 
                 movie.NumberAvailable--;

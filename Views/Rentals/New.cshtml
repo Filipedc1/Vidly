@@ -1,0 +1,20 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "New Rental Form";
+}
+
+<h2>New Rental Form</h2>
+
+<!--We are not going to Html.BeginForm(). This time we will use raw html since we are calling an action in a web API since its cleaner.-->
+<form>
+    <div class="form-group">
+        <label>Customer</label>
+        <input type="text" value="" class="form-control"/>
+    </div> 
+    <div class="form-group">
+        <label>Movie</label>
+        <input type="text" value="" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+</form>
