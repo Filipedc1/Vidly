@@ -1,0 +1,93 @@
+﻿body {
+    color: #52656B;
+}
+
+.body-content {
+    padding-top: 20px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-bottom: 30px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #3B4B50;
+}
+
+h2, .h2 {
+    font-size: 25px;
+}
+
+
+/*navigation bar color*/
+.navbar-inverse {
+    background-color: #1176A4;
+}
+
+/*navigation options color*/
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    transition: border-bottom ease-in-out .15s;
+    padding-bottom: 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    border-bottom: 3px solid #fff;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+    background-color: transparent;
+}
+
+a, .btn-link {
+    color: #09A7E4;
+}
+
+.btn {
+    border-radius: 10px;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/*button styling*/
+.btn-primary {
+    color: #ffffff;
+    background-color: #F2385A;
+    border-color: #F2385A;
+    background-color: #52656B;
+    border: 0;
+    padding: 8px 20px;
+}
+
+/*Form styling*/
+.form-control {
+    height: 41px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .10s, box-shadow ease-in-out .15s;
+    -moz-transition: border-color ease-in-out .10s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .10s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .10s, box-shadow ease-in-out .15s;
+    border-radius: 10px;
+}
+
+table a:not(.btn), .table a:not(.btn) {
+    text-decoration: none;
+}
+
+.pagination > li > a, .pager > li > a, .pagination > li > span, .pager > li > span {
+    text-transform: none;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    color: #ffffff;
+    background-color: #52656B;
+    border-color: #52656B;
+}
