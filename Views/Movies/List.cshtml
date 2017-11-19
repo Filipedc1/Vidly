@@ -12,8 +12,8 @@
         <tr>
             <th>Movie</th>
             <th>Genre</th>
-            <th>Delete</th>
             <th>Number In Stock</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -45,13 +45,13 @@
                         data: "genre.name"
                     },
                     {
+                        data: "numberAvailable"
+                    },
+                    {
                         data: "id",
                         render: function (data) {
                             return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
                         }
-                    },
-                    {
-                        data: "numberAvailable"
                     }
                 ]
             });
