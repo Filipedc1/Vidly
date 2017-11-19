@@ -106,3 +106,4 @@ D:\Coding\Udemy\Vidly\obj\Testing\Vidly.csproj.CoreCompileInputs.cache
 D:\Coding\Udemy\Vidly\obj\Testing\Vidly.dll
 D:\Coding\Udemy\Vidly\obj\Testing\Vidly.pdb
 D:\Coding\Udemy\Vidly\obj\Testing\Vidly.csprojResolveAssemblyReference.cache
+D:\Coding\Udemy\Vidly\bin\Elmah.dll
