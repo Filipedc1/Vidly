@@ -106,3 +106,4 @@ D:\Coding\Udemy\Vidly\obj\Release\Vidly.csproj.GenerateResource.Cache
 D:\Coding\Udemy\Vidly\obj\Release\Vidly.csproj.CoreCompileInputs.cache
 D:\Coding\Udemy\Vidly\obj\Release\Vidly.dll
 D:\Coding\Udemy\Vidly\obj\Release\Vidly.pdb
+D:\Coding\Udemy\Vidly\bin\Elmah.dll
