@@ -37,6 +37,22 @@ namespace Vidly.Controllers.API
                 return BadRequest("One or more movie ids are invalid.");
             }
 
+            //Checks to make sure a customer does not have more than 3 movies rented
+            if (newRental.MovieIds.Count > 3)
+            {
+                return BadRequest("A maximum of 3 movies can be rented.");
+            }
+            else
+            {
+                int moviesCurrentlyRentedCount = _context.Rentals.Where(m => m.Customer.Id == customer.Id).ToList().Count;
+                      
+                if (moviesCurrentlyRentedCount + newRental.MovieIds.Count > 3)
+                {
+                    return BadRequest($"A maximum of 3 movies can be rented.\nYou currently have {moviesCurrentlyRentedCount} rented");
+                }
+            }
+            
+
             foreach (var movie in movies)
             {
                 if (movie.NumberAvailable == 0)

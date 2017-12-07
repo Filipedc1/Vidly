@@ -33,7 +33,8 @@ namespace Vidly
                       "~/content/typeahead.css",
                       "~/content/toastr.css",
                       "~/content/bootstrap-theme.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/font-awesome.css"));
         }
     }
 }

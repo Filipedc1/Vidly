@@ -1,0 +1,103 @@
+﻿@model Vidly.ViewModels.CustomerViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+
+        <!--Edit Customer Column-->
+        <div class="col-md-6">
+            <h2>Edit</h2>
+
+            @using (Html.BeginForm("Save", "Customers"))
+            {
+                @Html.ValidationSummary(true, "Please correct the following errors.")
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Customer.Name)
+                    @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Customer.Name)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Customer.Birthdate)
+                    @Html.TextBoxFor(m => m.Customer.Birthdate, "{0:d MMM yyyy}", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Customer.Birthdate)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Customer.MembershipTypeId)
+                    @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
+                </div>
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter) Subscribed to Newsletter?
+                    </label>
+                </div>
+                @Html.HiddenFor(m => m.Customer.Id)
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-primary">Save</button>
+            }
+        </div>
+
+        <!--Current Rentals column-->
+        <div class="col-md-6">
+            <h2>Current Rentals</h2>
+
+            <div class="col-lg-push-8">
+                <table id="rentals" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Movie</th>
+                            <th>Date Rented</th>
+                            <th>Due Date</th>
+                            <th>Return</th> <!--display a button in this field. If clicked, movie is returned.-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Rentals != null || Model.Rentals.Count > 0)
+                        {
+                            foreach (var rental in Model.Rentals)
+                            {
+                                <tr>
+                                    <td>@rental.Movie.Name</td>
+                                    <td>@rental.DateRented.ToShortDateString()</td>
+                                    <td>@rental.DateRented.AddDays(3.0).Date</td>
+                                    <td>@Html.ActionLink("RETURN", "Return", "Rentals", rental, new { @class = "btn btn-primary" })</td>
+                                </tr>
+                            }
+                        }
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <!--NEW. not working correctly yet-->
+    <script>
+        $(".btn").click(function (e) {
+
+            e.preventDefault();
+
+            var url = $(this).attr('href');
+
+            bootbox.confirm("This movie will now be returned.",
+                function (result) {
+
+                    if (result)
+                    {
+                        window.location.href = url;
+                    }
+                });
+        });
+    </script>
+    <!---->
+
+}

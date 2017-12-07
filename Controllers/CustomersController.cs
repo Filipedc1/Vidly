@@ -114,14 +114,26 @@ namespace Vidly.Controllers
                 return HttpNotFound();
             }
 
-            var viewModel = new CustomerFormViewModel()
+            //add validation
+
+            var rentals = _context.Rentals.Where(r => r.Customer.Id == customer.Id).ToList();
+
+            var moviesRented = (from r in _context.Rentals
+                                where r.Customer.Id == customer.Id
+                                let movID = r.Movie.Id
+                                let movi = _context.Movies.FirstOrDefault(m => m.Id == movID)
+                                select movi).ToList();
+
+
+            var viewModel = new CustomerViewModel()
             {
                 Customer = customer,
-                MembershipTypes = _context.MembershipTypes.ToList()
+                MembershipTypes = _context.MembershipTypes.ToList(),
+                Rentals = rentals
             };
 
             //MVC will look for a view called 'Edit' if we dont have this 'New' parameter
-            return View("CustomerForm", viewModel); 
+            return View("CustomerDetails", viewModel); 
         }
     }
 }

@@ -110,8 +110,8 @@
 
                         validator.resetForm();
                     })
-                    .fail(function () {
-                        toastr.error("Something unexpected happened.");
+                        .fail(function (jqXHR, textStatus, errorThrown) {
+                            toastr.error(jqXHR.responseJSON.message);
                     });
 
                     //prevents for from being submitted normally:
