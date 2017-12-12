@@ -284,3 +284,5 @@ D:\Coding\Udemy\ASP.NET MVC5 Course\Vidly\obj\Debug\Vidly.csproj.CoreCompileInpu
 D:\Coding\Udemy\ASP.NET MVC5 Course\Vidly\obj\Debug\Vidly.dll
 D:\Coding\Udemy\ASP.NET MVC5 Course\Vidly\obj\Debug\Vidly.pdb
 D:\Coding\Udemy\ASP.NET MVC5 Course\Vidly\obj\Debug\Vidly.csprojResolveAssemblyReference.cache
+D:\Coding\Udemy\ASP.NET MVC5 Course\Vidly\bin\System.ValueTuple.dll
+D:\Coding\Udemy\ASP.NET MVC5 Course\Vidly\bin\System.ValueTuple.xml

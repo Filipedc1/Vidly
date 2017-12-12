@@ -25,8 +25,8 @@ namespace Vidly.Controllers.API
         public IHttpActionResult GetMovies(string query = null)
         {
             var moviesQuery = _context.Movies
-                .Include(m => m.Genre)
-                .Where(m => m.NumberAvailable > 0);
+                                .Include(m => m.Genre)
+                                .Where(m => m.NumberAvailable > 0);
 
             //if query parameter is not null, modify it. this is for filtering typeahead feature in the new rentals movies input text box
             //so if you type "spi", only movies that start with 'spi' will appear
@@ -36,8 +36,8 @@ namespace Vidly.Controllers.API
             }
 
             var movieDtos = moviesQuery
-                .ToList()
-                .Select(Mapper.Map<Movie, MovieDto>);
+                             .ToList()
+                             .Select(Mapper.Map<Movie, MovieDto>);
 
             return Ok(movieDtos);
         }
