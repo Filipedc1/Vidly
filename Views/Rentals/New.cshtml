@@ -16,7 +16,7 @@
     <div class="form-group">
         <label>Movie</label>
         <div class="tt-container">
-            <input id="movie" name="movie" data-rule-atLeastOneMovie="true" required type="text" value="" class="form-control" />
+            <input id="movie" name="movie" data-rule-atLeastOneMovie="true" type="text" value="" class="form-control" />
         </div>
     </div>
     <div class="row">
@@ -110,8 +110,17 @@
 
                         validator.resetForm();
                     })
-                        .fail(function (jqXHR, textStatus, errorThrown) {
-                            toastr.error(jqXHR.responseJSON.message);
+                    .fail(function (jqXHR, textStatus, errorThrown) {
+                        toastr.error(jqXHR.responseJSON.message);
+
+                        $("#customer").typeahead("val", "");
+                        $("#movie").typeahead("val", "");
+                        $("#movies").empty();
+                      
+                        vm = { movieIds: [] };
+
+                        validator.resetForm();
+
                     });
 
                     //prevents for from being submitted normally:

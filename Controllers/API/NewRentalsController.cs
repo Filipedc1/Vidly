@@ -132,7 +132,7 @@ namespace Vidly.Controllers.API
                                         })
                                         .ToList();
 
-            if ( moviesCurrentlyRented.Any(rental => rental.MovieIds.Any() == newRental.MovieIds.Any()) )
+            if ( moviesCurrentlyRented.Any(m => m.MovieIds.Contains(newRental.MovieIds.First())) )
             {
                 return true;
             }
